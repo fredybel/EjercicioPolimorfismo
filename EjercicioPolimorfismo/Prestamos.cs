@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿                                    //CLASE Base-Interface
 namespace EjercicioPolimorfismo
 {
-    internal interface Prestamos
+
+    //Metodos
+    public interface Prestamos
     {
+        public double Mes();
+        public void Imprimir();
+
     }
 }
