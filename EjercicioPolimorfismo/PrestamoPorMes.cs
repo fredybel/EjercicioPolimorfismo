@@ -1,14 +1,15 @@
-﻿                                //CLASE Derivada
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace EjercicioPolimorfismo
 {
-
-
-
-    public class Calculo : Prestamos   //Herencia
+    public class PrestamoPorMes
     {
 
-
-        //Variables
+            //Variables
         public double Capital;
         public double TasaInteres;
         public double Plazo;
@@ -19,6 +20,7 @@ namespace EjercicioPolimorfismo
 
         public double Mes()
         {
+            TasaInteres = 0.03;
 
             return Interes= Capital * TasaInteres * Plazo / 100;
             
@@ -27,7 +29,7 @@ namespace EjercicioPolimorfismo
         public void Imprimir()
         {
             Console.WriteLine();
-            Console.WriteLine($"El Interes a pagar es: { Mes()}");
+            Console.WriteLine($"El Interes Mensual a pagar es: { Mes()}");
         }
     }
 }
