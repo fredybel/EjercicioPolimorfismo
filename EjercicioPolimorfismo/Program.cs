@@ -1,74 +1,62 @@
 ﻿using EjercicioPolimorfismo;
 
-PrestamoPorMes prestamoPorMes = new PrestamoPorMes();
-PrestamoTrimestre prestamoTrimestre= new PrestamoTrimestre();
-PrestamoPorSemestre prestamoPorSemestre= new PrestamoPorSemestre();
- int opcion;
+PrestamoPersonal prestamoPersonal = new PrestamoPersonal();
+Cuota cuota = new Cuota();
+ValorTotal valorTotal = new ValorTotal();
+int opcion;
 
 
         Console.WriteLine("******************************************");
         Console.WriteLine("*                  MENU                  *");
-        Console.WriteLine("* 1.  Calcular interes de un prestamo    *");
-        Console.WriteLine("* 2.      Por Mes                        *");
-        Console.WriteLine("* 3.      Por trimestre                  *");
-        Console.WriteLine("* 4.      por Semestre                   *");
-        Console.WriteLine("* 5.      Por año                        *");
+        Console.WriteLine("* 1.      Calcular interes               *");
+        Console.WriteLine("* 2.      Calcular cuota                 *");
+        Console.WriteLine("* 3.      Valor a pagar total            *");
         Console.WriteLine("******************************************");
         Console.WriteLine("Escoja la opción:");
         opcion = Convert.ToInt32(Console.ReadLine());
 
-
-switch (opcion){
-
-
+switch (opcion)
+{
     case 1:
-        Console.WriteLine("Calculo de Interes Mensual");
-    Console.WriteLine("Ingrese el monto del Capital");
-prestamoPorMes.Capital = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine();
+        Console.WriteLine("Ingrese el capital del Prestamo");
+        prestamoPersonal.Capital = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Ingrese la tasa de interes");
-prestamoPorMes.TasaInteres = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Ingrese el plazo en años");
+        prestamoPersonal.Plazo = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Ingrese el Plazo");
-prestamoPorMes.Plazo = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine();
-prestamoPorMes.Imprimir();
-break;
-
+        Console.WriteLine();
+        prestamoPersonal.Imprimir();
+        break; 
 
 
     case 2:
-        Console.WriteLine("Calculo de Interes Trimestral");
-        Console.WriteLine("Ingrese el monto del Capital");
-        prestamoPorMes.Capital = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine();
+        Console.WriteLine("Ingrese el capital del Prestamo");
+        cuota.Capital = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Ingrese la tasa de interes");
-        prestamoPorMes.TasaInteres = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("Ingrese el Plazo");
-        prestamoPorMes.Plazo = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Ingrese el plazo en años");
+        cuota.Plazo = Convert.ToInt32(Console.ReadLine());
 
         Console.WriteLine();
-        prestamoPorMes.Imprimir();
+        cuota.Imprimir();
         break;
-
 
     case 3:
-        Console.WriteLine("Calculo de Interes Semestral");
-        Console.WriteLine("Ingrese el monto del Capital");
-        prestamoPorMes.Capital = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine();
+        Console.WriteLine("Ingrese el capital del Prestamo");
+        valorTotal.Capital = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Ingrese la tasa de interes");
-        prestamoPorMes.TasaInteres = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("Ingrese el Plazo");
-        prestamoPorMes.Plazo = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Ingrese el plazo en años");
+        valorTotal.Plazo = Convert.ToInt32(Console.ReadLine());
 
         Console.WriteLine();
-        prestamoPorMes.Imprimir();
+        valorTotal.Imprimir();
         break;
 }
+
+
+
 
 
 
